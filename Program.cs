@@ -66,7 +66,7 @@ namespace TT_RSS_Migration
                     seriesList.Add(new TableSeries() { TableName = "ttrss_users", ColumnName = "id", SeriesName = "ttrss_users_id_seq" });
                     UpdateSeries(
                         psqlConnection,
-                        "postgres",
+						options.PostgresqlUser,
                         seriesList);
                 }
             }
@@ -118,32 +118,46 @@ namespace TT_RSS_Migration
 
                     using (var psqlDataAdapter = new NpgsqlDataAdapter("SELECT * FROM " + table, psqlConnection))
                     {
-                    using (var psqlDataSet = new DataSet())
-                    {
-                        psqlDataSet.Reset();
-                        psqlDataAdapter.Fill(psqlDataSet);
+						using (var psqlDataSet = new DataSet())
+						{
+							psqlDataSet.Reset();
+							psqlDataAdapter.Fill(psqlDataSet);
 
-                        foreach (DataRow srcRow in mysqlDataSet.Tables[0].Rows)
-                        {
-                            var dstRow = psqlDataSet.Tables[0].NewRow();
+							foreach (DataRow srcRow in mysqlDataSet.Tables[0].Rows)
+							{
+								var dstRow = psqlDataSet.Tables[0].NewRow();
 
-                            foreach (DataColumn column in mysqlDataSet.Tables[0].Columns)
-                            {
-                                if (StringComparer.InvariantCultureIgnoreCase.Compare(table, "ttrss_users") == 0 &&
-                                    StringComparer.InvariantCultureIgnoreCase.Compare(column.ColumnName, "theme_id") == 0)
-                                    continue;
-                                dstRow[column.ColumnName] = srcRow[column.ColumnName];
-                            }
+								foreach (DataColumn column in mysqlDataSet.Tables[0].Columns)
+								{
+									if (StringComparer.InvariantCultureIgnoreCase.Compare(table, "ttrss_users") == 0 &&
+										StringComparer.InvariantCultureIgnoreCase.Compare(column.ColumnName, "theme_id") == 0)
+										continue;
+									dstRow[column.ColumnName] = srcRow[column.ColumnName];
+								}
 
-                            psqlDataSet.Tables[0].Rows.Add(dstRow);
-                        }
+								psqlDataSet.Tables[0].Rows.Add(dstRow);
+							}
 
-                        using (var objCommandBuilder = new NpgsqlCommandBuilder(psqlDataAdapter))
-                        {
-                            psqlDataAdapter.InsertCommand = objCommandBuilder.GetInsertCommand();
-                            psqlDataAdapter.Update(psqlDataSet);
-                        }
-                    }
+							using (var objCommandBuilder = new NpgsqlCommandBuilder(psqlDataAdapter))
+							{
+							
+								try
+								{
+									psqlDataAdapter.InsertCommand = objCommandBuilder.GetInsertCommand();
+								}
+								catch (Exception ex)
+								{
+									Console.WriteLine(ex.Message);
+									//throw;
+								}
+
+
+
+								psqlDataAdapter.Update(psqlDataSet);
+							}
+
+						}
+                    
                     }
                 }
                 }
