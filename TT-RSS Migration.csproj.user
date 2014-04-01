@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <StartArguments>--mhost=192.168.1.77 --muser=admin --mpass=1piano23%3f --mdb=ttrss --phost=192.168.1.77 --puser=admin --ppass=1piano23%3f --pdb=ttrss</StartArguments>
+  </PropertyGroup>
+</Project>

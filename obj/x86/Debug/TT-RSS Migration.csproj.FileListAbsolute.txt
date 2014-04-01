@@ -1,0 +1,22 @@
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\TT-RSS Migration.exe
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\TT-RSS Migration.pdb
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\CommandLine.dll
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\Mono.Security.dll
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\MySql.Data.dll
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\Npgsql.dll
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\policy.2.0.Npgsql.dll
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\CommandLine.xml
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\Npgsql.pdb
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\Npgsql.xml
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\de\Npgsql.resources.dll
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\es\Npgsql.resources.dll
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\zh-CN\Npgsql.resources.dll
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\bin\Debug\policy.2.0.Npgsql.config
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\obj\x86\Debug\TT-RSS Migration.csprojResolveAssemblyReference.cache
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\obj\x86\Debug\TT_RSS_Migration.Resource.resources
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\obj\x86\Debug\TT-RSS Migration.csproj.GenerateResource.Cache
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\obj\x86\Debug\TT-RSS Migration.exe
+C:\Users\Zarek\Desktop\TT-RSS Migration v6\obj\x86\Debug\TT-RSS Migration.pdb
